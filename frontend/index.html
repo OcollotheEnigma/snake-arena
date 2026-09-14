@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Snake Arena</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🐍 Snake Arena</h1>
+
+        <p class="subtitle">
+            Eat the food. Grow your snake. Beat the leaderboard!
+        </p>
+
+        <div class="controls">
+
+            <input
+                id="playerName"
+                type="text"
+                placeholder="Enter your name"
+            >
+
+            <button id="startButton">
+                Start Game
+            </button>
+
+        </div>
+
+        <div class="score">
+            Score: <span id="score">0</span>
+        </div>
+
+        <canvas
+            id="game"
+            width="400"
+            height="400">
+        </canvas>
+
+        <p id="message">
+            Enter your name and press Start Game.
+        </p>
+
+        <button id="submitButton" disabled>
+            Submit Score
+        </button>
+
+        <h2>🏆 Leaderboard</h2>
+
+        <ol id="leaderboard"></ol>
+
+    </div>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
