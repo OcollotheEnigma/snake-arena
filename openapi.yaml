@@ -1,0 +1,41 @@
+openapi: 3.0.3
+
+info:
+  title: Snake Arena API
+  version: 1.0.0
+  description: API for storing and retrieving Snake Arena scores.
+
+servers:
+  - url: http://localhost:8000
+
+paths:
+  /health:
+    get:
+      summary: Check API health
+      responses:
+        "200":
+          description: API is healthy
+
+  /scores:
+    get:
+      summary: Get leaderboard scores
+      responses:
+        "200":
+          description: List of scores
+
+    post:
+      summary: Submit a score
+      parameters:
+        - name: player_name
+          in: query
+          required: true
+          schema:
+            type: string
+        - name: score
+          in: query
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: Score saved
